@@ -1,6 +1,6 @@
-# Antonangelo Pratas — Loja Online (Prata 925)
+# iJ World — Loja Online (APPLE)
 
-Loja virtual minimalista e luxuosa para a joalheria **Antonangelo Pratas**, em Ourinhos/SP.  
+Loja virtual minimalista e luxuosa para a joalheria **iJ World**, em Nova Fatima/PR.  
 Feita para rodar no **GitHub Pages**.
 
 ## 🚀 Deploy no GitHub Pages
@@ -16,7 +16,7 @@ Feita para rodar no **GitHub Pages**.
 6. O site estará online em alguns minutos em:
 
 ```
-https://SEU-USUARIO.github.io/antonangelo-pratas/
+https://SEU-USUARIO.github.io/ijworld/
 ```
 
 ## 📦 Estrutura
