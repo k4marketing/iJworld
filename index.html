@@ -109,7 +109,7 @@
             justify-content: center;
             position: relative;
             overflow: hidden;
-            padding-top: 80px; /* Espaço para o header fixo */
+            padding-top: 80px;
         }
         .hero-background {
             position: absolute;
@@ -127,7 +127,7 @@
             max-width: 800px;
             padding: 0 20px;
             position: relative;
-            margin-top: 80px; /* Move o conteúdo para baixo do header */
+            margin-top: 80px;
         }
         .hero h1 {
             font-size: 4rem;
@@ -207,7 +207,7 @@
             transform: translateY(-3px);
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
         }
-        /* Services Section */
+        /* Sections */
         .section {
             padding: 100px 0;
         }
@@ -232,6 +232,7 @@
             height: 2px;
             background-color: var(--apple-blue);
         }
+        /* Services Section */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -271,9 +272,64 @@
             color: var(--gray-light);
             line-height: 1.8;
         }
+        /* Clientes Section */
+        .clientes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .cliente-post {
+            height: 300px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        .cliente-post img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.5s ease;
+        }
+        .cliente-post:hover img {
+            transform: scale(1.05);
+        }
+        .cliente-post::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 113, 227, 0.2);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            border-radius: 8px;
+        }
+        .cliente-post:hover::after {
+            opacity: 1;
+        }
+        .cliente-icon {
+            position: absolute;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            color: white;
+            font-size: 2rem;
+            z-index: 2;
+        }
+        .cliente-post:hover .cliente-icon {
+            opacity: 1;
+        }
         /* Contact Section */
         .contact-section {
-            padding: 100px 0;
             background-color: var(--gray-dark);
         }
         .contact-content {
@@ -529,7 +585,7 @@
             .section-title {
                 font-size: 2.2rem;
             }
-            .services-grid {
+            .services-grid, .clientes-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -557,6 +613,7 @@
             <nav class="nav-links">
                 <a href="#home">Home</a>
                 <a href="#servicos">Serviços</a>
+                <a href="#clientes">Clientes</a>
                 <a href="#contato">Contato</a>
             </nav>
             <button class="mobile-menu-btn">
@@ -589,11 +646,11 @@
                 </div>
 
                 <div class="cta-buttons">
-                    <a href="https://wa.me/5543999999999" target="_blank" class="btn btn-whatsapp">
+                    <a href="https://api.whatsapp.com/send?phone=554399275910&text=ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20produtos%20Apple.%20%F0%9F%98%80" target="_blank" class="btn btn-whatsapp">
                         <i class="fab fa-whatsapp"></i>
                         WhatsApp
                     </a>
-                    <a href="https://instagram.com/ijworld" target="_blank" class="btn btn-instagram">
+                    <a href="https://www.instagram.com/ij__world/" target="_blank" class="btn btn-instagram">
                         <i class="fab fa-instagram"></i>
                         Instagram
                     </a>
@@ -638,20 +695,61 @@
         </div>
     </section>
 
+    <!-- Clientes Section -->
+    <section id="clientes" class="section">
+        <div class="container">
+            <h2 class="section-title">Nossos <span>Clientes</span></h2>
+            <div class="clientes-grid">
+                <a href="https://www.instagram.com/ij__world/" target="_blank" class="cliente-post">
+                    <img src="https://placehold.co/600x600/1a1a1a/0071e3?text=Cliente+1" alt="Cliente 1">
+                    <i class="fab fa-instagram cliente-icon"></i>
+                </a>
+                <a href="https://www.instagram.com/ij__world/" target="_blank" class="cliente-post">
+                    <img src="https://placehold.co/600x600/1a1a1a/0071e3?text=Cliente+2" alt="Cliente 2">
+                    <i class="fab fa-instagram cliente-icon"></i>
+                </a>
+                <a href="https://www.instagram.com/ij__world/" target="_blank" class="cliente-post">
+                    <img src="https://placehold.co/600x600/1a1a1a/0071e3?text=Cliente+3" alt="Cliente 3">
+                    <i class="fab fa-instagram cliente-icon"></i>
+                </a>
+                <a href="https://www.instagram.com/ij__world/" target="_blank" class="cliente-post">
+                    <img src="https://placehold.co/600x600/1a1a1a/0071e3?text=Cliente+4" alt="Cliente 4">
+                    <i class="fab fa-instagram cliente-icon"></i>
+                </a>
+                <a href="https://www.instagram.com/ij__world/" target="_blank" class="cliente-post">
+                    <img src="https://placehold.co/600x600/1a1a1a/0071e3?text=Cliente+5" alt="Cliente 5">
+                    <i class="fab fa-instagram cliente-icon"></i>
+                </a>
+                <a href="https://www.instagram.com/ij__world/" target="_blank" class="cliente-post">
+                    <img src="https://placehold.co/600x600/1a1a1a/0071e3?text=Cliente+6" alt="Cliente 6">
+                    <i class="fab fa-instagram cliente-icon"></i>
+                </a>
+                <a href="https://www.instagram.com/ij__world/" target="_blank" class="cliente-post">
+                    <img src="https://placehold.co/600x600/1a1a1a/0071e3?text=Cliente+7" alt="Cliente 7">
+                    <i class="fab fa-instagram cliente-icon"></i>
+                </a>
+                <a href="https://www.instagram.com/ij__world/" target="_blank" class="cliente-post">
+                    <img src="https://placehold.co/600x600/1a1a1a/0071e3?text=Cliente+8" alt="Cliente 8">
+                    <i class="fab fa-instagram cliente-icon"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Section -->
-    <section id="contato" class="contact-section">
+    <section id="contato" class="contact-section section">
         <div class="container">
             <div class="contact-content">
                 <h2>Entre em <span>Contato</span></h2>
                 <p>Estamos prontos para atender você! Entre em contato através do WhatsApp ou Instagram</p>
                 
                 <div class="contact-buttons">
-                    <a href="https://wa.me/5543999999999" target="_blank" class="contact-btn whatsapp-btn">
+                    <a href="https://api.whatsapp.com/send?phone=554399275910&text=ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20produtos%20Apple.%20%F0%9F%98%80" target="_blank" class="contact-btn whatsapp-btn">
                         <i class="fab fa-whatsapp"></i>
                         <h3>WhatsApp</h3>
                         <p>Atendimento rápido e direto</p>
                     </a>
-                    <a href="https://instagram.com/ijworld" target="_blank" class="contact-btn instagram-btn">
+                    <a href="https://www.instagram.com/ij__world/" target="_blank" class="contact-btn instagram-btn">
                         <i class="fab fa-instagram"></i>
                         <h3>Instagram</h3>
                         <p>Siga-nos para novidades e promoções</p>
@@ -681,10 +779,10 @@
                     <h3>iJ World</h3>
                     <p>Sua loja especializada em produtos Apple com os melhores preços e serviços</p>
                     <div class="social-links">
-                        <a href="https://wa.me/5543999999999" class="social-link" target="_blank">
+                        <a href="https://api.whatsapp.com/send?phone=554399275910&text=ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20produtos%20Apple.%20%F0%9F%98%80" class="social-link" target="_blank">
                             <i class="fab fa-whatsapp"></i>
                         </a>
-                        <a href="https://instagram.com/ijworld" class="social-link" target="_blank">
+                        <a href="https://www.instagram.com/ij__world/" class="social-link" target="_blank">
                             <i class="fab fa-instagram"></i>
                         </a>
                     </div>
@@ -701,7 +799,7 @@
                 <div class="footer-column">
                     <h3>Compre Agora</h3>
                     <div class="footer-cta">
-                        <button class="whatsapp-cta" onclick="window.open('https://wa.me/5543999999999', '_blank')">
+                        <button class="whatsapp-cta" onclick="window.open('https://api.whatsapp.com/send?phone=554399275910&text=ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20produtos%20Apple.%20%F0%9F%98%80', '_blank')">
                             <i class="fab fa-whatsapp"></i> WhatsApp
                         </button>
                         <p style="color: rgba(255, 255, 255, 0.7); font-size: 0.9rem;">
